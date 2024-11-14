@@ -1,0 +1,41 @@
+ Json grammar specification
+ 
+Json := 
+       String
+     | Boolean
+     | Integer
+     | Double
+     | Null
+     | Array
+     | Map
+
+Map :=
+     { KeyValue list }
+     
+Array := 
+      [ Elements list ]
+
+KeyValueList:= 
+        empty
+      | KeyAndValue
+      | KeyAndValue , KeyValueList
+
+KeyAndValue :=
+      String  : Json
+
+Elements list := 
+          empty
+        | Json
+        | Json, Elements list
+
+String :=
+      " Text string "
+
+Boolean :=
+          true
+       |  false
+
+Null. :=
+     null
+     
+End of Json grammar specification.     
