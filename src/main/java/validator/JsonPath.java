@@ -38,15 +38,5 @@ public class JsonPath {
 		}
 		return sb.toString();
 	}
-	
-	public static void main(String[] args) {
-		JsonPath jp1 = new JsonPath();
-		jp1.add(new JsonString("key"));
-		jp1.add(new JsonArrayIndex(101));
-		JsonPath jp2 = new JsonPath();
-		jp2.add(jp1);
-		jp2.add(new JsonString("key2"));
-		System.out.println(jp2);
-	}
 
 }

@@ -87,14 +87,4 @@ public class JsonModel {
 		}		
 	}
 
-	public static void main(String[] args) throws Exception {
-		String dir = "C:\\Users\\ADMIN\\OneDrive\\Desktop\\PanchangamJsonModel";
-		String modelFile = dir + "\\modelspecs.json";
-		String testFile = dir + "\\spec.json";
-		JsonObject spec = new JsonParse(Path.of(testFile)).get();
-		JsonObject model = new JsonParse(Path.of(modelFile)).get();
-		new JsonModel(model).validate(spec);
-		System.out.println("done");
-	}
-
 }
